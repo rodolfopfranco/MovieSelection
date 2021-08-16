@@ -52,11 +52,14 @@ export class CadastroFilmesComponent implements OnInit {
       return;
     }
 
+    //Obtém os dados do formulário e coloca como o tipo de dados da interface usada para o JSon
     const filme = this.cadastro.getRawValue() as Filme;
     if (this.id) {
+      //Se já tiver um id, só salva a atualização
       filme.id = this.id;
       this.editar(filme);
     } else {
+      //Senão, invoca o método de salvar passando os dados do formulário
       this.salvar(filme);
     }
   }
@@ -92,6 +95,9 @@ export class CadastroFilmesComponent implements OnInit {
   }
 
   private salvar(filme: Filme): void {
+    //filmeService usa o filmes.service.ts para passar os dados e gravar.
+    //.subscribe é necessário para, de fato, realizar a ação.
+    //O subscribe se inscreve para aguardar o retorno do resultado da ação
     this.filmeService.salvar(filme).subscribe(() => {
       const config = {
         data: {
