@@ -20,6 +20,7 @@ export class CadastroFilmesComponent implements OnInit {
   cadastro: FormGroup;
   generos: Array<string>;
 
+  //Injeção de dependências:
   constructor(public validacao: ValidarCamposService,
               public dialog: MatDialog,
               private fb: FormBuilder,

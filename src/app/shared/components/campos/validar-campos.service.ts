@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
 
+//libera o arquivo para ser usado no root (em qualquer lugar da aplicação):
 @Injectable({
   providedIn: 'root'
 })
