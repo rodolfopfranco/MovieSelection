@@ -7,7 +7,7 @@ import { AbstractControl } from '@angular/forms';
 export class ValidarCamposService {
 
   constructor() { }
-
+//Métodos para validar os campos de cadastro-filmes.ts / html
   hasErrorValidar(control: AbstractControl, errorName: string): boolean {
     if ((control.dirty || control.touched) && this.hasError(control, errorName)) {
       return true;

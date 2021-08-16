@@ -45,6 +45,7 @@ export class CadastroFilmesComponent implements OnInit {
   }
 
   submit(): void {
+    //markAllAsTouched "clica" em todos os itens fazendo com que a validação ocorra nos campos.
     this.cadastro.markAllAsTouched();
     if (this.cadastro.invalid) {
       return;

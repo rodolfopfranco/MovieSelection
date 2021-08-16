@@ -8,6 +8,7 @@
             [formControlName]="controlName"
             (click)="picker.open()">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <!--Responsável pelo popup de data via Google Material:-->
     <mat-datepicker #picker></mat-datepicker>
   <mat-error *ngIf="validacao.hasErrorValidar(formControl, 'required')">Campo obrigatório</mat-error>
   </mat-form-field>
