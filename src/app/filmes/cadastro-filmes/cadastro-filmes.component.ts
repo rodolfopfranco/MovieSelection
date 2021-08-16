@@ -16,6 +16,7 @@ import { Alerta } from 'src/app/shared/models/alerta';
 export class CadastroFilmesComponent implements OnInit {
 
   id: number;
+  //Variável que será chamada no html:
   cadastro: FormGroup;
   generos: Array<string>;
 
@@ -63,6 +64,7 @@ export class CadastroFilmesComponent implements OnInit {
   }
 
   private criarFormulario(filme: Filme): void {
+  //Validators são responsáveis por verificar os atributos dos formulários  
     this.cadastro = this.fb.group({
       titulo: [filme.titulo, [Validators.required, Validators.minLength(2), Validators.maxLength(256)]],
       urlFoto: [filme.urlFoto, [Validators.minLength(10)]],
