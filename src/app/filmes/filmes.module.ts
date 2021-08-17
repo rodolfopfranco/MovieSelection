@@ -17,6 +17,7 @@ import { VisualizarFilmesComponent } from './visualizar-filmes/visualizar-filmes
     ReactiveFormsModule,
     FormsModule,
     CamposModule,
+    //Responsável pelo scroll infinito, após executar o comando npm install ngx-infinite-scroll --save:
     InfiniteScrollModule
   ],
   declarations: [CadastroFilmesComponent, ListagemFilmesComponent, VisualizarFilmesComponent]

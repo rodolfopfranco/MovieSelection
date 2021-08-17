@@ -27,6 +27,7 @@ export class ListagemFilmesComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit(): void {
+    //Obtém a listagem dos filmes:
     this.filtrosListagem = this.fb.group({
       texto: [''],
       genero: ['']
@@ -58,7 +59,10 @@ export class ListagemFilmesComponent implements OnInit {
   }
 
   private listarFilmes(): void {
+    //pagina++ incrementa a configuração necessária para executar o comando do infiniteScroll
+    //Esse comando aqui: /posts?_page=1&limit=20
     this.config.pagina++;
+    //o push adicionará o conteúdo no vetor filmes, que é exibido lá no html desse componente com o *ngFor
     this.filmesService.listar(this.config)
       .subscribe((filmes: Filme[]) => this.filmes.push(...filmes));
   }

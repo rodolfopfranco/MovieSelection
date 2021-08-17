@@ -22,10 +22,12 @@
   </form>
 </mat-card>
 
+<!--Propriedades do infinite scroll logo abaixo:-->
 <div  class="home-content"
       infiniteScroll
       (scrolled)="onScroll()"
       *ngIf="filmes.length; else semRegistro">
+      <!--*ngFor é usado para fazer uma iteração nos itens do vetor filmes, obtido na inicialização do componente.-->
   <mat-card class="home-card" *ngFor="let filme of filmes">
     <mat-card-header>
       <div mat-card-avatar></div>
