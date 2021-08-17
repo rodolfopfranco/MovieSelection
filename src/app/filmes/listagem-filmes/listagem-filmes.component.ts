@@ -33,6 +33,7 @@ export class ListagemFilmesComponent implements OnInit {
       genero: ['']
     });
 
+    //Faz a busca quando ocorre mudança o texto
     this.filtrosListagem.get('texto').valueChanges
     .pipe(debounceTime(400))
     .subscribe((val: string) => {
@@ -40,6 +41,8 @@ export class ListagemFilmesComponent implements OnInit {
       this.resetarConsulta();
     });
 
+    //Comando responsável por identificar se houveram alterações no gênero.
+    //É executado ao ter uma muança no valor
     this.filtrosListagem.get('genero').valueChanges.subscribe((val: string) => {
       this.config.campo = {tipo: 'genero', valor: val};
       this.resetarConsulta();

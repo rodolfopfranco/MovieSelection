@@ -9,15 +9,19 @@ export class ConfigParamsService {
 
   constructor() { }
 
+  //Gerencia os parâmetros de consulta da API:
   configurarParametros(config: ConfigPrams): HttpParams {
     let httpParams = new HttpParams();
     if (config.pagina) {
+      //Página na qual irá
       httpParams = httpParams.set('_page', config.pagina.toString());
     }
     if (config.limite) {
+      //Limite de filmes por carregamento:
       httpParams = httpParams.set('_limit', config.limite.toString());
     }
     if (config.pesquisa) {
+      //Busca por um determinado item:
       httpParams = httpParams.set('q', config.pesquisa);
     }
     if (config.campo) {
