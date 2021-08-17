@@ -33,6 +33,7 @@ export class VisualizarFilmesComponent implements OnInit {
 
   excluir(): void {
     const config = {
+      //Dados que aparecem na tela ao executar o método:
       data: {
         titulo: 'Você tem certeza que deseja excluir?',
         descricao: 'Caso você tenha certceza que deseja excluir, clique no botão OK',
@@ -43,6 +44,7 @@ export class VisualizarFilmesComponent implements OnInit {
     };
     const dialogRef = this.dialog.open(AlertaComponent, config);
     dialogRef.afterClosed().subscribe((opcao: boolean) => {
+      //Executa a exclusão e redireciona de volta para o /filmes
       if (opcao) {
         this.filmesService.excluir(this.id)
         .subscribe(() => this.router.navigateByUrl('/filmes'));
