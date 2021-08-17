@@ -35,6 +35,7 @@ export class ListagemFilmesComponent implements OnInit {
 
     //Faz a busca quando ocorre mudança o texto
     this.filtrosListagem.get('texto').valueChanges
+    //DebounceTime vem do RJSX e limita os ms no qual é realizada a consulta para evitar alto consumo
     .pipe(debounceTime(400))
     .subscribe((val: string) => {
       this.config.pesquisa = val;

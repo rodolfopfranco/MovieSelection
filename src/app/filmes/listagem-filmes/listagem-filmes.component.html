@@ -23,6 +23,7 @@
 </mat-card>
 
 <!--Propriedades do infinite scroll logo abaixo:-->
+<!--SemRegistro exibe a mensagem se não tiver resultados na filtragem-->
 <div  class="home-content"
       infiniteScroll
       (scrolled)="onScroll()"
@@ -46,6 +47,7 @@
   </mat-card>
 </div>
 
+<!--chamado caso não tenha sido obtido nenhum registro-->
 <ng-template #semRegistro>
   <h1 class="full-width main-div">Nenhum registro encontrado!</h1>
 </ng-template>

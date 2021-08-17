@@ -6,6 +6,7 @@ import { Filme } from 'src/app/shared/models/filme';
 import { Alerta } from 'src/app/shared/models/alerta';
 import { AlertaComponent } from 'src/app/shared/components/alerta/alerta.component';
 
+//View do filme
 @Component({
   selector: 'dio-visualizar-filmes',
   templateUrl: './visualizar-filmes.component.html',

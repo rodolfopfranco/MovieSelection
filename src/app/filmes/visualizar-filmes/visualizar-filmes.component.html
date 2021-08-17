@@ -1,5 +1,7 @@
 <mat-list *ngIf="filme; else semRegistro">
+  <!--Objetos obtidos pelo data binding na propriedade do objeto filme-->
   <mat-list-item> Título: {{filme.titulo}} </mat-list-item>
+  <!--Aplicação de pipe para formatação da informação:-->
   <mat-list-item> Data de lançamento: {{filme.dtLancamento | date: 'dd/MM/yyyy' }} </mat-list-item>
   <mat-list-item> Gênero: {{filme.genero}} </mat-list-item>
   <mat-list-item class="quebrar-linha"> Descrição: {{filme.descricao}} </mat-list-item>
